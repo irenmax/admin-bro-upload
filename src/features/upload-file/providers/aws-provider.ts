@@ -62,6 +62,7 @@ export class AWSProvider extends BaseProvider {
     const params: S3.PutObjectRequest = {
       Bucket: this.bucket,
       Key: key,
+      ContentType: file.type,
       Body: tmpFile,
     }
     if (!this.expires) {
