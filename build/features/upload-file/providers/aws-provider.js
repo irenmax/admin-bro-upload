@@ -28,6 +28,7 @@ class AWSProvider extends base_provider_1.BaseProvider {
         const params = {
             Bucket: this.bucket,
             Key: key,
+            ContentType: file.type,
             Body: tmpFile,
         };
         if (!this.expires) {
